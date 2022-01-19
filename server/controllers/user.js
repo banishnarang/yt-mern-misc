@@ -2,6 +2,30 @@ const User = require("../models/user");
 const minifaker = require("minifaker");
 require("minifaker/locales/en");
 
+exports.read = async (req, res) => {
+	const page = req.query.page || 1;
+	const perPage = req.query.perPage || 5;
+
+	try {
+		const count = await User.countDocuments({});
+
+		const users = await User.find({})
+			.sort({ firstName: 1, lastName: 1 })
+			.skip((page - 1) * parseInt(perPage))
+			.limit(parseInt(perPage));
+
+		// success
+		res.status(200).json({
+			count,
+			users,
+		});
+	} catch (error) {
+		res.status(400).json({
+			error: `Error getting data: ${error.message}`,
+		});
+	}
+};
+
 exports.create = async (req, res) => {
 	const users = [];
 
