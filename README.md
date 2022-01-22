@@ -1,6 +1,6 @@
-Public Repository for tutorial series "MERN Miscellaneous" from YouTube channel "You Suck At Coding"
+### Public Repository for tutorial series "MERN Miscellaneous" from YouTube channel "You Suck At Coding"
 
-...
+<hr>
 
 Parent branch: mern-setup  
 
