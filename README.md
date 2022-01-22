@@ -1,13 +1,15 @@
-Public Repository for tutorial series "MERN Miscellaneous" from YouTube channel "You Suck At Coding"
+### Public Repository for tutorial series "MERN Miscellaneous" from YouTube channel "You Suck At Coding"
 
-...
+<hr>
 
-Parent branch: mern-setup
+Parent branch: mern-setup  
 Current branch: mern-pagination
 
-Branch description: This branch is for the first episode of the series covering pagination.
+Branch description: This branch is for the first episode of the series covering <b>Pagination</b>.
 
 Tech used: MongoDB, Express, React, Node.js, MaterialUI v5, and Boostrap CSS v4.6.
+
+<hr>
 
 Open source package(s) used:
 1. Minifaker: https://github.com/g45t345rt/minifaker
