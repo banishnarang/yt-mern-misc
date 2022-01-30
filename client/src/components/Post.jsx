@@ -9,7 +9,7 @@ const Post = ({ avatar, username, image, caption }) => {
 						<img src={avatar} alt="avatar" />
 					</div>
 				</div>
-				<div className="self-center font-bol">{username}</div>
+				<div className="self-center font-bold">{username}</div>
 			</div>
 			<figure>
 				<img src={image} alt="Post" />
