@@ -2,11 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 // import controllers
-const { getTest } = require("../controllers/test");
+const { create } = require("../controllers/post");
 
 // import middlewares
 
 // api routes
-router.get("/test", getTest);
+router.post("/posts", create);
 
 module.exports = router;

@@ -25,8 +25,8 @@ app.use(urlencoded({ extended: false }));
 app.use(cors({ origin: true, credentials: true }));
 
 // routes
-const testRoutes = require("./routes/test");
-app.use("/", testRoutes);
+const postRoutes = require("./routes/post");
+app.use("/", postRoutes);
 
 // port
 const port = process.env.PORT || 8080;
