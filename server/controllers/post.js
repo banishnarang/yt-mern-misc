@@ -39,7 +39,7 @@ exports.create = async (req, res) => {
 
 				const post = new Post({
 					username: minifaker.username(),
-					avatar: `https://i/pravatar.cc/150?img=${randomAvatarNum}`,
+					avatar: `https://i.pravatar.cc/150?img=${randomAvatarNum}`,
 					image: `https://i.pravatar.cc/600?img=${randomImageNum}`,
 					caption: `${minifaker.word()} ${minifaker.word()} ${minifaker.cityName()}`,
 				});
