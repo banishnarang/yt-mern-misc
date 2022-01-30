@@ -1,7 +1,27 @@
 const Post = require("../models/post");
-
 const minifaker = require("minifaker");
 require("minifaker/locales/en");
+
+// @route   GET /posts
+// @desc    Get all posts
+// @access  Public
+exports.read = async (req, res) => {
+	const skip = req.query.skip ? Number(req.query.skip) : 0;
+	const DEFAULT_LIMIT = 10;
+
+	try {
+		const posts = await Post.find({}).skip(skip).limit(DEFAULT_LIMIT);
+
+		res.status(200).json({
+			success: true,
+			data: posts,
+		});
+	} catch (error) {
+		res.status(400).json({
+			error: `Error getting posts: ${error.message}`,
+		});
+	}
+};
 
 // @route   POST /posts
 // @desc    Create {total} posts
